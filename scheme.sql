@@ -20,7 +20,12 @@ create table `paniers` (
 
 create table `panier_articles` (
     `panier` int not null,
-    `article` char(10) not null
+    `article` char(10) not null,
+    `basePriceHT` decimal(5,2) not null,
+    `basePriceTTC` decimal(5,2) not null,
+    `percentDiscount` smallint default null,
+    `fixedDiscountHT` decimal(5,2) default null,
+    `fixedDiscountTTC` decimal(5,2) default null;
 );
 
 create table `paiments` (
@@ -34,7 +39,12 @@ create table `paiment_articles` (
     `panier` int not null,
     `article` char(10) not null,
     `priceHT` decimal(5,2) not null,
-    `priceTTC` decimal(5,2) not null
+    `priceTTC` decimal(5,2) not null,
+    `basePriceHT` decimal(5,2) not null,
+    `basePriceTTC` decimal(5,2) not null,
+    `percentDiscount` smallint default null,
+    `fixedDiscountHT` decimal(5,2) default null,
+    `fixedDiscountTTC` decimal(5,2) default null
 );
 
 create table `discounts` (
