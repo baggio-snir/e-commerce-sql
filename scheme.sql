@@ -22,3 +22,17 @@ create table `panier_articles` (
     `panier` int not null,
     `article` char(10) not null
 );
+
+create table `paiments` (
+    `panier` int not null,
+    `datePay` datetime not null,
+    `totalPriceHT` decimal(10,2) not null,
+    `totalPriceTTC` decimal(10,2) not null
+);
+
+create table `paiment_articles` (
+    `panier` int not null,
+    `article` char(10) not null,
+    `priceHT` decimal(5,2) not null,
+    `priceTTC` decimal(5,2) not null
+);
