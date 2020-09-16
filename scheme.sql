@@ -36,3 +36,13 @@ create table `paiment_articles` (
     `priceHT` decimal(5,2) not null,
     `priceTTC` decimal(5,2) not null
 );
+
+create table `discounts` (
+    `article` char(10) not null,
+    `dateStart` datetime not null,
+    `dateEnd` datetime not null,
+    `maxArticles` int default null,
+    `percentDiscount` smallint default null,
+    `fixedDiscountHT` decimal(5,2) default null,
+    `fixedDiscountTTC` decimal(5,2) default null
+);
